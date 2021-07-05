@@ -1,8 +1,10 @@
 import { useHistory } from 'react-router-dom';
 
-import illustrationImg from '../assets/images/illustration.svg';
-import logoImg from '../assets/images/logo.svg';
+//import illustrationImg from '../assets/images/illustration.svg';
+import illustrationImg from '../assets/images/principal.png';
+//import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
+import logoImg from '../assets/images/secundario.png'
 
 import { Button } from '../components/Button';
 
@@ -36,6 +38,11 @@ export function Home() {
     if (!roomRef.exists()) {
       alert('Room does not exists.');
     }
+
+    if (roomRef.val().endedAt) {
+      alert('Room already closed.')
+      return;
+    }
     history.push(`/rooms/${roomCode}`)
   }
 
@@ -44,8 +51,11 @@ export function Home() {
     <div id='page-auth'>
       <aside>
         <img src={illustrationImg} alt="Ilustração perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
+        <strong>Crie salas. Compartilhe experiências!</strong>
+        <br />
+        <br />
+        <p>Crie salas e interaja com nossa comunidade gamer,</p>
+        <p> compartilhe sua experiência em tempo real!</p>
       </aside>
       <main>
 

@@ -1,7 +1,7 @@
 import { Link, useHistory } from 'react-router-dom';
 import { FormEvent, useState } from 'react';
-import illustrationImg from '../assets/images/illustration.svg';
-import logoImg from '../assets/images/logo.svg';
+import illustrationImg from '../assets/images/principal.png';
+import logoImg from '../assets/images/secundario.png'
 
 import { Button } from '../components/Button';
 //import { TestContext } from '../App'
@@ -35,8 +35,11 @@ export function NewRoom() {
     <div id='page-auth'>
       <aside>
         <img src={illustrationImg} alt="Ilustração perguntas e respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo-real</p>
+        <strong>Crie salas. Compartilhe experiências!</strong>
+        <br />
+        <br />
+        <p>Crie salas e interaja com nossa comunidade gamer,</p>
+        <p> compartilhe sua experiência em tempo real!</p>
       </aside>
       <main>
         <div className="main-content">
